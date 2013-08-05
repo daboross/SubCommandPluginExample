@@ -16,24 +16,10 @@
  */
 package net.daboross.bukkitdev.subcommandexample;
 
-import net.daboross.bukkitdev.commandexecutorbase.CommandExecutorBase;
-import org.bukkit.plugin.java.JavaPlugin;
-
 /**
  *
  * @author daboross
  */
-public class SubCommandExamplePlugin extends JavaPlugin {
-
-    @Override
-    public void onEnable() {
-        // Create a new CommandExecutorBase for our command.
-        // The paramater is the permission that should be require to use this command.
-        CommandExecutorBase cmdBase = new CommandExecutorBase("exampleplugin.mycommand");
-        
-    }
-
-    @Override
-    public void onDisable() {
-    }
+public class ExampleSubCommand1 {
+    
 }
