@@ -3,3 +3,5 @@ main: net.daboross.bukkitdev.subcommandexample.SubCommandExamplePlugin
 version: ${project.version}
 author: Dabo Ross
 description: Example of SubCommands using CommandExecutorBase
+commands:
+  examplecommand:

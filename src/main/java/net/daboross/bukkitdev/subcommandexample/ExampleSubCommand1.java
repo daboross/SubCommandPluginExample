@@ -16,10 +16,25 @@
  */
 package net.daboross.bukkitdev.subcommandexample;
 
+import net.daboross.bukkitdev.commandexecutorbase.SubCommand;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+
 /**
  *
  * @author daboross
  */
-public class ExampleSubCommand1 {
-    
+public class ExampleSubCommand1 extends SubCommand {
+
+    private final SubCommandExamplePlugin plugin;
+
+    public ExampleSubCommand1(SubCommandExamplePlugin plugin) {
+        super("subcmd1", true, "exampleplugin.subcmd1", "This is an example sub command");
+        this.plugin = plugin;
+    }
+
+    @Override
+    public void runCommand(CommandSender sender, Command baseCommand, String baseCommandLabel, String subCommandLabel, String[] subCommandArgs) {
+        sender.sendMessage("You have run the sub command 1");
+    }
 }

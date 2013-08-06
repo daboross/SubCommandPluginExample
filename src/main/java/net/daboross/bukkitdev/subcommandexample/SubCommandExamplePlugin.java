@@ -30,7 +30,9 @@ public class SubCommandExamplePlugin extends JavaPlugin {
         // Create a new CommandExecutorBase for our command.
         // The paramater is the permission that should be require to use this command.
         CommandExecutorBase cmdBase = new CommandExecutorBase("exampleplugin.mycommand");
-        
+        cmdBase.addSubCommand(new ExampleSubCommand1(this));
+        cmdBase.addSubCommand(new ExampleSubCommand2(this));
+        getCommand("examplecommand").setExecutor(cmdBase);
     }
 
     @Override
